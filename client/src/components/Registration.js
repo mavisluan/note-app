@@ -1,39 +1,38 @@
 import React, {Fragment} from 'react';
 // import PropTypes from 'prop-types';
+import {FormGroup, Form, Button} from 'react-bootstrap';
 
 const Registration = props => {
     return (
         <Fragment>
             <h2 className="large text-primary">Register</h2>
-            <form className="form mt-3" action="">
-                <div className="form-group">
-                    <input type="text" className="form-control" placeholder="Name" name="name" minLength="2"
+            <Form className="form mt-3" action="">
+                <FormGroup>
+                    <Form.Control type="text" placeholder="Name" name="name" minLength="2"
                     />
-                </div>
+                </FormGroup>
                 <div className="form-group">
                     <input className="form-control" type="email" placeholder="Email Address" name="email"/>
                 </div>
                 <div className="form-group">
-                    <input
-                        className="form-control"
+                    <Form.Control
                         type="password"
                         placeholder="Password"
                         name="password"
                         minLength="6"
                     />
                 </div>
-                <div className="form-group">
-                    <input
-                        className="form-control"
+                <FormGroup>
+                    <Form.Control
                         type="password"
                         placeholder="Confirm Password"
                         name="password2"
                         minLength="6"
                     />
-                </div>
-                <input type="submit" className="btn btn-primary" value="Register"/>
-            </form>
-            <p className="my-1">
+                </FormGroup>
+                <Button type="submit" variant="primary" value="Register">Submit</Button>
+            </Form>
+            <p className="my-1 mb-5">
                 Already have an account? <a href="/login">Sign In</a>
             </p>
         </Fragment>

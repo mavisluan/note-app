@@ -1,5 +1,6 @@
 import React, {Fragment} from 'react';
 // import PropTypes from 'prop-types';
+import {FormGroup, Form, Button} from 'react-bootstrap';
 
 const Login = props => {
     return (
@@ -8,26 +9,24 @@ const Login = props => {
             {/*    Invalid credentials*/}
             {/*</div>*/}
             <h2 className="large text-primary">Sign In</h2>
-            <form className="form mt-3" action="/dashboard">
-                <div className="form-group">
-                    <input
-                        className="form-control"
+            <Form className="form mt-3" action="/dashboard">
+                <FormGroup>
+                    <Form.Control
                         type="email"
                         placeholder="Email Address"
                         name="email"
                         required
                     />
-                </div>
-                <div className="form-group">
-                    <input
-                        className="form-control"
+                </FormGroup>
+                <FormGroup>
+                    <Form.Control
                         type="password"
                         placeholder="Password"
                         name="password"
                     />
-                </div>
-                <input type="submit" className="btn btn-primary form-control" value="Login"/>
-            </form>
+                </FormGroup>
+                <Button type="submit" variant="primary" value="Login">Login</Button>
+            </Form>
             <p className="my-1">
                 Don't have an account? <a href="/register">Sign Up</a>
             </p>
