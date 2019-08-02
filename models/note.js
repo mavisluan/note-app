@@ -24,7 +24,11 @@ const Note = mongoose.model('Note', {
     _creator: {
         type: mongoose.SchemaTypes.ObjectId,
         required: true
+    },
+    _viewers: {
+        type: Array,
+        default: []
     }
-})
+});
 
-module.exports = {Note}
+module.exports = {Note};
